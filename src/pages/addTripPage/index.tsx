@@ -18,7 +18,7 @@ const AddTripPage: React.FC = () => {
       }}
     >
       <Typography variant="h2">Add trip page</Typography>
-      <Button onClick={() => navigate("/")} variant="contained">
+      <Button onClick={() => navigate("/truck-trips")} variant="contained">
         Go to dashboard
       </Button>
     </Box>
