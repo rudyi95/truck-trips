@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/truck-trips/static/css/main.d26faac1.css",
-    "main.js": "/truck-trips/static/js/main.abbd6cae.js",
+    "main.js": "/truck-trips/static/js/main.09a40a8e.js",
     "static/js/787.f03e2a7b.chunk.js": "/truck-trips/static/js/787.f03e2a7b.chunk.js",
     "index.html": "/truck-trips/index.html",
     "main.d26faac1.css.map": "/truck-trips/static/css/main.d26faac1.css.map",
-    "main.abbd6cae.js.map": "/truck-trips/static/js/main.abbd6cae.js.map",
+    "main.09a40a8e.js.map": "/truck-trips/static/js/main.09a40a8e.js.map",
     "787.f03e2a7b.chunk.js.map": "/truck-trips/static/js/787.f03e2a7b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d26faac1.css",
-    "static/js/main.abbd6cae.js"
+    "static/js/main.09a40a8e.js"
   ]
 }
