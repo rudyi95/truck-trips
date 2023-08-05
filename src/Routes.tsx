@@ -1,7 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { MainPage, AddTripPage, TripsPage } from "./pages";
+import AddTripPage from "./pages/addTripPage";
+import MainPage from "./pages/mainPage";
+import TripsPage from "./pages/tripsPage";
 import { Layout } from "./containers";
 
 const Routers: React.FC = () => {
