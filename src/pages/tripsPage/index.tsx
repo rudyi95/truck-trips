@@ -5,6 +5,7 @@ import { Box, Button, Typography } from "@mui/material";
 
 const TripsPage: React.FC = () => {
   const navigate = useNavigate();
+  
 
   return (
     <Box
