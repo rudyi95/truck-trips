@@ -10,7 +10,7 @@ const Routers: React.FC = () => {
   return (
     <div className="app">
       <Routes>
-        <Route path="/truck-trips" element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
           <Route path="add-trip" element={<AddTripPage />} />
           <Route path="trips" element={<TripsPage />} />
