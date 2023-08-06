@@ -1,16 +1,14 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import Routes from "./Routes";
 
 import "./App.css";
 
+const router = createBrowserRouter([{ path: "*", Component: Routes }]);
+
 const App: React.FC = () => {
-  return (
-    <BrowserRouter>
-      <Routes />
-    </BrowserRouter>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
