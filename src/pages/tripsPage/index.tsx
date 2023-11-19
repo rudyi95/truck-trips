@@ -1,12 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const TripsPage: React.FC = () => {
-  const navigate = useNavigate();
-  
-
+  const data = sessionStorage.getItem("trip");
   return (
     <Box
       sx={{
@@ -18,10 +15,19 @@ const TripsPage: React.FC = () => {
         gap: "20px",
       }}
     >
-      <Typography variant="h2">Trips list</Typography>
-      <Button onClick={() => navigate("/")} variant="contained">
+      {!data
+        ? "No Data"
+        : Object.entries(JSON.parse(data)).map(([key, value]: any) => {
+            return (
+              <Box sx={{ display: "flex", gap: "20px" }}>
+                <Typography sx={{ textTransform: "capitalize" }}>{key}</Typography>
+                <Typography>{value}</Typography>
+              </Box>
+            );
+          })}
+      {/* <Button onClick={() => navigate("/")} variant="contained">
         Go to dashboard
-      </Button>
+      </Button> */}
     </Box>
   );
 };

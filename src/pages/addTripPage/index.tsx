@@ -1,11 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
-import { Box, Button, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import { AddTripForm } from "src/containers";
 
 const AddTripPage: React.FC = () => {
-  const navigate = useNavigate();
-
   return (
     <Box
       sx={{
@@ -17,10 +15,7 @@ const AddTripPage: React.FC = () => {
         gap: "20px",
       }}
     >
-      <Typography variant="h2">Add trip page</Typography>
-      <Button onClick={() => navigate("/")} variant="contained">
-        Go to dashboard
-      </Button>
+      <AddTripForm />
     </Box>
   );
 };
