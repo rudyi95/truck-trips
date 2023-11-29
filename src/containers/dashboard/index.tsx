@@ -12,19 +12,30 @@ export const Dashboard: React.FC = () => {
 
   return (
     <Box className={classes.root}>
-      <Typography variant="h2">Dashboard</Typography>
-      <Button
-        onClick={() => navigate("add-trip")}
-        variant="contained"
-        size="LG_MD_SM"
-        text={"Add trip"}
-      />
-      <Button
-        onClick={() => navigate("trips")}
-        variant="contained"
-        size="LG_MD_SM"
-        text={"Trips table"}
-      />
+      <Box className={classes.neoButton}>
+        <Button
+          onClick={() => navigate("add-trip")}
+          variant="contained"
+          size="LG_MD_SM"
+          text={"Add trip"}
+          disableElevation
+          disableFocusRipple
+          disableRipple
+          disableTouchRipple
+        />
+      </Box>
+      <Box className={classes.neoButton}>
+        <Button
+          onClick={() => navigate("trips")}
+          variant="contained"
+          size="LG_MD_SM"
+          text={"Trips table"}
+          disableElevation
+          disableFocusRipple
+          disableRipple
+          disableTouchRipple
+        />
+      </Box>
     </Box>
   );
 };

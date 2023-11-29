@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 import { useFormik } from "formik";
 import { v4 as uuidv4 } from "uuid";
 
-import { Button, Input } from "src/components";
+import { Button, DatePicker, Input } from "src/components";
 
 import classes from "./styles.module.scss";
 
@@ -13,10 +13,10 @@ export const AddTripForm: React.FC = () => {
     initialValues: {
       startL: "",
       endL: "",
-      startD: "",
-      endD: "",
-      gross: 0,
-      miles: 0,
+      startD: null,
+      endD: null,
+      gross: undefined,
+      miles: undefined,
     },
     onSubmit: (values, { resetForm }) => {
       const newData = { id: uuidv4(), ...values };
@@ -29,6 +29,10 @@ export const AddTripForm: React.FC = () => {
       resetForm();
     },
   });
+
+  const handleDate = (name: string, date: Nullable<string>) => {
+    formik.setFieldValue(name, date);
+  };
 
   return (
     <Box className={classes.root}>
@@ -45,17 +49,18 @@ export const AddTripForm: React.FC = () => {
           value={formik.values.endL}
           onChange={formik.handleChange}
         />
-        <Input
-          name="startD"
+        <DatePicker
           label="Start date"
           value={formik.values.startD}
-          onChange={formik.handleChange}
+          onAccept={(v) => handleDate("startD", v)}
+          maxDate={!!formik.values.endD ? formik.values.endD : undefined}
         />
-        <Input
-          name="endD"
+        <DatePicker
           label="End date"
           value={formik.values.endD}
-          onChange={formik.handleChange}
+          onAccept={(v) => handleDate("endD", v)}
+          minDate={!!formik.values.startD ? formik.values.startD : undefined}
+          disabled={!formik.values.startD}
         />
         <Input
           name="gross"

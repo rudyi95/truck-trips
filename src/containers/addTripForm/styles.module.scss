@@ -1,12 +1,21 @@
 .root {
   display: flex;
+  flex-direction: column;
   gap: 20px;
+  width: 80%;
+  border: 1px black solid;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .formList {
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  & > div > div {
+    width: 100%;
+  }
 }
 
 .button {

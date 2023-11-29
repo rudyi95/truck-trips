@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <AppBar className={classes.root}>
+    <AppBar className={classes.root} position='sticky'>
       <Box sx={{ width: "40%" }}>
         <IconButton sx={{ color: "#FFF" }} onClick={() => navigate("/")}>
           <Home />

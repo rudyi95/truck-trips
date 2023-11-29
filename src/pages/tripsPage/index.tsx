@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { Box, IconButton, Typography } from "@mui/material";
+import moment from "moment";
 
 import { Delete } from "@mui/icons-material";
 
@@ -41,10 +42,11 @@ const TripsPage: React.FC = () => {
                       Duration:
                     </Typography>
                     <Typography sx={{ textTransform: "capitalize" }}>
-                      {item.startD} - {item.endD}
+                      {moment(item.startD).format("MM/DD/YYYY")} -{" "}
+                      {moment(item.endD).format("MM/DD/YYYY")}
                     </Typography>
                   </Box>
-                  <Box sx={{ display: "flex", flexDirection: "column" }}>
+                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
                     <Box sx={{ display: "flex" }}>
                       <Typography sx={{ textTransform: "capitalize", fontWeight: "bold" }}>
                         Gross:

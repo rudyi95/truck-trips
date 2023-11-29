@@ -7,3 +7,5 @@ declare interface ITrip {
   gross: string;
   miles: string;
 }
+
+declare type Nullable<T> = T | null;
